@@ -44,12 +44,12 @@ API para cadastro, alteração, exclusão e consultas de livros.
 2. Baixe a imagem do projeto:
 
    ```bash
-   docker pull comettivitor/bookstore-app:latest
+   docker pull comettivitor/bookstore:latest
 
 3. Crie o volume e o container docker:
     
    ```bash
-   docker run -d -p 8080:8080 --name bookstore -v bookstore-app-h2:/app comettivitor/bookstore-app:latest
+   docker run -d -p 8080:8080 --name bookstore -v bookstore-app-h2:/app comettivitor/bookstore:latest
 
 4. Confira se o projeto esta em execução:
 
