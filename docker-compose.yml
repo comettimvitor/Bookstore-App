@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bookstore
+    networks:
+      - bookstore-network
+    ports:
+      - "8080:8080"
+    volumes:
+      - h2-database:/data
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:h2:mem:bookstoredb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DATABASE_TO_UPPER=false;NON_KEYWORDS=VALUE"
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: "org.h2.Driver"
+      SPRING_DATASOURCE_USERNAME: "sa"
+      SPRING_DATASOURCE_PASSWORD: "password"
+      SPRING_JPA_DATABASE_PLATFORM: "org.hibernate.dialect.H2Dialect"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_FORMAT_SQL: "true"
+      SPRING_H2_CONSOLE_ENABLED: "true"
+      SPRING_H2_WEB_ALLOW_OTHERS: "true"
+      SPRING_H2_CONSOLE_PATH: "/h2-console"
+    restart: always
+
+volumes:
+  h2-database: {}
+
+networks:
+  bookstore-network: {}
