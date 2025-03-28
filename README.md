@@ -104,6 +104,7 @@ Exemplo de URL: `http://localhost:8080/livro/alterar/1`
 
 #### Request
 ```
+Content-type: application/json
 {
    "titulo": "O Senhor dos Anéis",
    "autor": "J.R.R. Tolkien",
