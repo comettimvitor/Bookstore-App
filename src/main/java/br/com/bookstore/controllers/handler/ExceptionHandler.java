@@ -15,10 +15,10 @@ public class ExceptionHandler {
     @org.springframework.web.bind.annotation.ExceptionHandler(LivroJaCadastradoException.class)
     public ResponseEntity<Map<String, String>> handleLivroJaCadastradoException(LivroJaCadastradoException e) {
         Map<String, String> error = new HashMap<>();
-        error.put("error", "400");
+        error.put("error", "409");
         error.put("message", e.getMessage());
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 
     @org.springframework.web.bind.annotation.ExceptionHandler(LivroNaoEncontradoException.class)
