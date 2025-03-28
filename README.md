@@ -14,13 +14,6 @@ API para cadastro, alteração, exclusão e consultas de livros.
 - **H2 Database** - Banco de dados utilizado.
 - **Docker** - Para containerização da aplicação.
 
-## Funcionalidades
-
-- Cadastro de livros.
-- Exclusão de livros.
-- Alteração de livros.
-- Busca de livros (por ID, categoria autor).
-
 ## Instalação
 
 ### Siga os passos abaixo para executar o projeto localmente.
@@ -61,7 +54,7 @@ API para cadastro, alteração, exclusão e consultas de livros.
    ```bash
    docker start bookstore
    
-6. Agora a API está pronta
+6. Agora a API está pronta para ser testada
 
 ## Endpoints da API
 
