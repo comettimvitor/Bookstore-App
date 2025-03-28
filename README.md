@@ -268,7 +268,7 @@ Exemplo de URL: `http://localhost:8080/livro/buscar/categoria?categoria=FANTASIA
 }
 ```
 
-### 7. Deleta um livro `GET /livro/deletar/{id}`
+### 7. Deleta um livro `DELETE /livro/deletar/{id}`
 
 Exemplo de URL: `http://localhost:8080/livro/deletar/1`
 
