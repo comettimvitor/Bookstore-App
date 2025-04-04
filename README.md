@@ -1,7 +1,5 @@
 # Bookstore App
 
-Desafio técnico NT Consult.
-
 ## Sobre o Projeto
 
 API para cadastro, alteração, exclusão e consultas de livros.
@@ -19,7 +17,7 @@ API para cadastro, alteração, exclusão e consultas de livros.
 - Cadastro de livros.
 - Exclusão de livros.
 - Alteração de livros.
-- Busca de livros (por ID, categoria autor).
+- Busca de livros (por ID, categoria e autor).
 
 ## Instalação
 
